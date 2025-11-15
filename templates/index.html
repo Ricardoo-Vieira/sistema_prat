@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Sistema de Tarefas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Minhas Tarefas</h1>
+
+    <form action="/" method="POST">
+        <input type="text" name="titulo" placeholder="Nova tarefa..." required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>{{ tarefa.id }} - {{ tarefa.titulo }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
